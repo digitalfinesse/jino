@@ -1,0 +1,65 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:700|PT+Sans:400,700&subset=cyrillic');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1092px;
+	min-width: 819px;
+	margin: 0 auto;
+}
+
+section {
+	box-sizing: border-box;
+	min-height: 100%;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.domain {
+	background: url("../images/section_domain_bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+
+	h2 {
+		font-family: 'PT Sans Caption', sans-serif;
+		font-weight: bold;
+		font-size: 80px;
+		text-align: center;
+	}
+}
+.information {
+	background-color: #fff;
+}
+.why {
+	background: url("../images/section_why_bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+
+	h2 {
+		font-family: 'PT Sans Caption', sans-serif;
+		font-weight: bold;
+		font-size: 50px;
+		text-align: center;
+	}
+}
