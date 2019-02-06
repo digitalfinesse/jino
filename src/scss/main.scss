@@ -25,7 +25,17 @@ body,
 	width: 90%;
 	max-width: 1092px;
 	min-width: 819px;
+	min-height: 100vh;
+
 	margin: 0 auto;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	justify-content: space-between;
+
+	padding-top: 25px;
 }
 
 section {
@@ -35,23 +45,138 @@ section {
 }
 
 .domain {
-	background: url("../images/section_domain_bg.jpg");
+	background: url("../images/background1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: #fff;
 
-	h2 {
-		font-family: 'PT Sans Caption', sans-serif;
-		font-weight: bold;
-		font-size: 80px;
-		text-align: center;
+	.header {
+
+		a {
+			display: flex;
+			align-items: center;
+
+			svg {
+				display: inline-block;
+				width: 73px;
+				height: 19px;
+				fill: #fff;
+			}
+
+			span {
+				display: inline-block;
+				font-size: 16px;
+				color: #fff;
+				font-weight: bold;
+				padding-left: 10px;
+			}
+		}
+
+		span.data {
+			text-align: center;
+			display: block;
+			font-size: 12px;
+			letter-spacing: 2.16px;
+			color: #fff;
+			font-weight: bold;
+			margin: 0;
+		}
+	}
+
+	.domain_center_block {
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2 {
+			font-family: 'PT Sans Caption', sans-serif;
+			font-weight: bold;
+			font-size: 80px;
+			text-align: center;
+			margin-bottom: 75px;
+		}
+
+		.block_with_form {
+			width: 723px;
+			padding: 0;
+			margin-bottom: 35px;
+
+			.top_form_block {
+				background-color: #fff;
+				padding: 14px 15px 14px 39px;
+				border-radius: 5px;
+				position: relative;
+
+				form {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					height: 50px;
+
+					input[type="text"] {
+						border: 0;
+						color: #333333;
+						font-weight: normal;
+						font-size: 24px;
+						width: 75%;
+						outline: 0;
+					}
+					button {
+						color: #fff;
+						background-color: #5f6062;
+						border-radius: 5px;
+						font-size: 22px;
+						padding: 11px 26px;
+						outline: 0;
+					}
+				}
+
+			}
+
+			.bottom_form_block {
+				border-radius: 5px;
+				background-color: RGBa(51,57,63,0.9);
+				margin-top: -15px;
+				padding-top: 15px;
+
+				p {
+					opacity: 1;
+					font-size: 16px;
+					color: #fff;
+					text-align: center;
+					padding: 12px;
+					a {
+						color: #77b53c;
+						text-decoration: underline;
+						margin-left: 7px;
+					}
+				}
+			}
+
+		}
+
+		a.button_create {
+			background-color: #77b53c;
+			color: #fff;
+			text-decoration: none;
+			padding: 15px 45px;
+			border-radius: 5px;
+			font-size: 24px;
+			font-weight: bold;
+			opacity: 1;
+		}
+	}
+
+	a.scroll-down {
+		margin: 15px auto 60px auto;
 	}
 }
 .information {
 	background-color: #fff;
 }
 .why {
-	background: url("../images/section_why_bg.jpg");
+	background: url("../images/background2.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: #fff;

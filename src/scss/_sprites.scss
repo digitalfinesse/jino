@@ -1,4 +1,25 @@
-$sprites: ();
+$sprites: (
+	"down": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 27,
+			height: 50,
+			image: "sprites.png",
+			total_width: 27,
+			total_height: 50,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 54,
+			height: 100,
+			image: "sprites@2x.png",
+			total_width: 54,
+			total_height: 100,
+		),
+	),
+);
 
 @each $name in map-keys($sprites) {
 	.sprite-#{$name} {

@@ -7,10 +7,28 @@ block content
 
 	section.domain
 		.wrapper
-			h2 Честная цена
-				br
-				| за домен .RU — 39₽
+			.header
+				a(href="/")
+					+svg("logo")
+					span домены
+				span.data Только до 31 января
+			.domain_center_block
+				h2 Честная цена
+					br
+					| за домен .RU — 39₽
+				.block_with_form
+					.top_form_block
+						form
+							input(type="text" placeholder="example.ru")
+							button(type="submit") Проверить
+					.bottom_form_block
+						p Домен example.ru — свободен.
+							a(href="") Зарегистрировать за 39₽
 
+				a.button_create(href="") Создать аккаунт
+
+			a.scroll-down(href="")
+				span.sprite-down
 
 
 	section.information
