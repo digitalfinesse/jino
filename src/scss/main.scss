@@ -21,27 +21,30 @@ body,
 	height: 100%;
 }
 
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
 .wrapper {
 	width: 90%;
 	max-width: 1092px;
 	min-width: 819px;
 	min-height: 100vh;
+	position: relative;
 
-	margin: 0 auto;
+	margin: auto;
 	box-sizing: border-box;
 
 	display: flex;
 	flex-direction: column;
 	justify-items: center;
 	justify-content: space-between;
-
-	padding-top: 25px;
 }
 
 section {
+	display: block;
 	box-sizing: border-box;
 	min-height: 100%;
-	font-family: 'PT Sans', sans-serif;
 }
 
 a.button_create {
@@ -56,13 +59,14 @@ a.button_create {
 }
 
 .domain {
-	background: url("../images/background1.jpg");
+	background-image: url("../images/background1.jpg");
 	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	color: #fff;
 
 	.header {
-
+		padding-top: 25px;
 		a {
 			display: flex;
 			align-items: center;
@@ -94,19 +98,21 @@ a.button_create {
 		}
 	}
 
+	h1 {
+		font-family: 'PT Sans Caption', sans-serif;
+		font-weight: bold;
+		font-size: 80px;
+		text-align: center;
+		margin: auto;
+		margin-bottom: 30px;
+	}
+
 	.domain_center_block {
 		margin: auto;
+		margin-top: 30px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
-		h2 {
-			font-family: 'PT Sans Caption', sans-serif;
-			font-weight: bold;
-			font-size: 80px;
-			text-align: center;
-			margin-bottom: 75px;
-		}
 
 		.block_with_form {
 			width: 723px;
@@ -175,17 +181,206 @@ a.button_create {
 
 .information {
 	background-color: #fff;
+
+	.logo {
+		padding-top: 25px;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+
+		svg {
+			display: inline-block;
+			width: 73px;
+			height: 19px;
+			fill: #b22725;
+		}
+
+		span {
+			display: inline-block;
+			font-size: 16px;
+			color: #333333;
+			font-weight: bold;
+			padding-left: 10px;
+		}
+	}
+
+	h2 {
+		color: #333333;
+		font-size: 35px;
+		font-weight: bold;
+		margin: auto
+	}
+
+	.advantage_block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: center;
+		margin-top: 30px;
+
+		.advantage {
+			display: flex;
+			flex-direction: column;
+			width: 200px;
+			text-align: center;
+			color: #333;
+
+			svg {
+				display: block;
+				margin: auto;
+				height: 75px;
+			}
+
+			.text-block {
+				height: 50px;
+				margin-top: 20px;
+
+				p {
+					font-size: 20px;
+					margin: auto;
+				}
+			}
+		}
+
+		.businesscard {
+			svg {
+				width: 58px;
+			}
+		}
+		.dns {
+			svg {
+				width: 68px;
+			}
+		}
+		.certificate {
+			svg {
+				width: 58px;
+			}
+		}
+		.autorenewal {
+			svg {
+				width: 75px;
+			}
+		}
+		.cloud {
+			svg {
+				width: 75px;
+			}
+		}
+		.freessl {
+			svg {
+				width: 51px;
+			}
+		}
+		.dnssec {
+			svg {
+				width: 75px;
+			}
+		}
+		.redirect {
+			svg {
+				width: 75px;
+			}
+		}
+	}
+
+	.message {
+
+		background-color: #f7f7f7;
+		border: 1px solid #afafb0;
+		border-radius: 10px;
+
+	}
+
+	/* THE SPEECH BUBBLE ----------------------------- */
+
+	.triangle-border {
+		position:relative;
+		padding: 30px 40px;
+		margin: 30px 0;
+		border: 1px solid #afafb0;
+		color:#333;
+		background:#f7f7f7;
+		border-radius:10px;
+
+		p {
+			font-size: 16px;
+			color: #333;
+		}
+	}
+
+	.triangle-border:before {
+		content:"";
+		position:absolute;
+		bottom:-20px; /* value = - border-top-width - border-bottom-width */
+		left:40px; /* controls horizontal position */
+		border-width:1px 1px 0;
+		border-style:solid;
+		border-color:#afafb0 transparent;
+		/* reduce the damage in FF3.0 */
+		display: block;
+		width: 0;
+	}
+
+	/* creates the smaller  triangle */
+	.triangle-border:after {
+		content:"";
+		position:absolute;
+		bottom:-13px; /* value = - border-top-width - border-bottom-width */
+		left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+		border-width:1px 1px 0;
+		border-style:solid;
+		//border-color:#000 transparent;
+		border-color:#f7f7f7 transparent;
+		/* reduce the damage in FF3.0 */
+		display:block;
+		width:0;
+	}
+
+	/* Variant : top
+    ------------------------------------------ */
+
+	/* creates the larger triangle */
+	.triangle-border.top:before {
+		top:-20px; /* value = - border-top-width - border-bottom-width */
+		bottom:auto;
+		left:auto;
+		right:41px; /* controls horizontal position */
+		border-width:0 20px 20px;
+	}
+
+	/* creates the smaller  triangle */
+	.triangle-border.top:after {
+		top:-18px; /* value = - border-top-width - border-bottom-width */
+		bottom:auto;
+		left:auto;
+		right:43px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+		border-width:0 18px 18px;
+	}
+
+
+
+
+
+
+
+	a.button_create {
+		margin-bottom: 75px;
+	}
+
 }
+
 .why {
-	background: url("../images/background2.jpg");
+	background-image: url("../images/background2.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: #fff;
 
-	a.logo {
+	.logo {
 		display: flex;
 		align-items: center;
 		height: 20px;
+		padding-top: 25px;
 
 		svg {
 			display: inline-block;
@@ -209,13 +404,14 @@ a.button_create {
 		font-size: 35px;
 	}
 
-	span {
+	span.big_text {
 		font-family: 'PT Sans Caption', sans-serif;
 		font-weight: bold;
 		font-size: 50px;
 		line-height: 60px;
 		text-align: center;
-
+		width: 90%;
+		margin: auto;
 	}
 
 	.plus {
@@ -234,7 +430,7 @@ a.button_create {
 			height: 70px;
 			width: 2px;
 			opacity: .2;
-			margin-left: 30px;
+			margin: auto 30px;
 		}
 
 		p.thousand {
@@ -260,5 +456,6 @@ a.button_create {
 		color: #fff;
 		font-size: 14px;
 		margin: auto;
+		text-align: center;
 	}
 }

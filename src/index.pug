@@ -12,10 +12,14 @@ block content
 					+svg("logo")
 					span домены
 				span.data Только до 31 января
+
+
+			h1 Честная цена
+				br
+				| за домен .RU — 39₽
+
+
 			.domain_center_block
-				h2 Честная цена
-					br
-					| за домен .RU — 39₽
 				.block_with_form
 					.top_form_block
 						form
@@ -27,37 +31,74 @@ block content
 
 				a.button_create(href="") Создать аккаунт
 
+
 			a.scroll-down(href="")
 				span.sprite-down
 
 
+
 	section.information
 		.wrapper
-			h2 Секция Информации
+			.logo
+				+svg("logo")
+				span домены
+			h2 Зарегистрировав у нас домен, вы получите
 
+			.advantage_block
+				.advantage.businesscard
+					+svg("businesscard")
+					.text-block
+						p Сайт-визитка
+				.advantage.dns
+					+svg("dns")
+					.text-block
+						p Поддержка DNS
+				.advantage.certificate
+					+svg("certificate")
+					.text-block
+						p Сертификат о владении доменом
+				.advantage.autorenewal
+					+svg("autorenewal")
+					.text-block
+						p Автопродление
+			.advantage_block
+				.advantage.cloud
+					+svg("cloud")
+					.text-block
+						p Облачное хранилище на 20 Гб
+				.advantage.freessl
+					+svg("freessl")
+					.text-block
+						p Бесплатный SSL-сертификат
+				.advantage.dnssec
+					+svg("dnssec")
+					.text-block
+						p DNSSEC в один клик
+				.advantage.redirect
+					+svg("redirect")
+					.text-block
+						p Перенаправление
+
+			.triangle-border.top
+				p Для любого вашего домена, зарегистрированного на «Джино», вы можете в несколько кликов создать простую страницу-визитку. Это удобно, если ваш основной сайт еще не готов, или если домен вам нужен только для почты. Вы можете разместить здесь краткую информацию о себе или вашем бизнесе, ссылки на аккаунты в соцсетях и любые другие сайты. Создание и поддержка базового варианта сайта-визитки абсолютно бесплатны.
+				b.triangle
+
+			a.button_create(href="") Создать аккаунт
 
 	section.why
 		.wrapper
-			a.logo(href="/")
+			.logo
 				+svg("logo")
 				span домены
 			h2 Почему стоит выбрать «Джино»?
-			span «Джино» более 18 лет на рынке,
-				br
-				| имеет 270 000 довольных клиентов,
-				br
-				| собственную панель управления
-				br
-				| и многое другое.
+			span.big_text «Джино» более 18 лет на рынке, имеет 270 000 довольных клиентов, собственную панель управления и многое другое.
 			a.button_create(href="") Создать аккаунт
 
 			.plus
-				p Вы получите 1000 баллов в системе лояльности Джино.Плюсы,
-					br
-					| зарегистрировавшись в течении 24 часов после посещения данной страницы
+				p Вы получите 1000 баллов в системе лояльности Джино.Плюсы, зарегистрировавшись в течении 24&nbsp;часов после посещения данной страницы
 				.divider
 				p.thousand
 					| 1000
 					+svg("plus-bold")
 
-			p.copyright © «Джино», 2003–2017. «Джино» является зарегистрированным товарным знаком. Лицензия на телематические услуги связи № 97495 от 09.03.2012. Правовая информация.
+			p.copyright © «Джино», 2003–2017. «Джино» является зарегистрированным товарным знаком. Лицензия на телематические услуги связи №&nbsp;97495&nbsp;от&nbsp;09.03.2012. Правовая информация.
