@@ -80,8 +80,8 @@ a.button_create {
 		margin: 8px auto;
 		border-radius: 50%;
 
-		background-color: #000;
-		border: 2px solid #fff;
+		background-color: #fff;
+		border: 1px solid #000;
 
 		&_active {
 			width: 15px;
@@ -89,8 +89,8 @@ a.button_create {
 			margin: 8px auto;
 			border-radius: 50%;
 
-			background-color: #fff;
-			border: 2px solid #000
+			background-color: #000;
+			border: 1px solid #fff;
 		}
 	}
 }
