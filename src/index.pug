@@ -7,6 +7,12 @@ block content
 	script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
 	#app
 
+		.scroll-panel
+			a.circle(href="#sect1" v-bind:class="{circle_active: activeSection === 1}" v-on:click.prevent="activeSection = 1" v-smooth-scroll="{ duration: 1500 }")
+			a.circle(href="#sect2" v-bind:class="{circle_active: activeSection === 2}" v-on:click.prevent="activeSection = 2" v-smooth-scroll="{ duration: 1500 }")
+			a.circle(href="#sect3" v-bind:class="{circle_active: activeSection === 3}" v-on:click.prevent="activeSection = 3" v-smooth-scroll="{ duration: 1500 }")
+
+
 		section#sect1.domain
 			.wrapper
 				.header
@@ -24,26 +30,28 @@ block content
 				.domain_center_block
 					.block_with_form
 						.top_form_block
-							form
-								input(type="text" placeholder="example.ru")
+							form(@submit.prevent="checkDomen")
+								input(type="text" v-bind:placeholder="defaultDomen" name="domenName" v-model="domenName")
 								button(type="submit") Проверить
 						.bottom_form_block
-							p Домен example.ru — свободен.
-								a(href="") Зарегистрировать за 39₽
+							p
+								span.freeDomen(v-show="visible") Домен {{ defaultDomen }} — свободен!
+								a(href="#") Зарегистрировать за 39₽
 
 					a.button_create(href="") Создать аккаунт
 
 
-				a.scroll-down(href="#sect2" v-smooth-scroll="{ duration: 1500 }")
+				a.scroll-down(href="#sect2" v-on:click.prevent="activeSection = 2" v-smooth-scroll="{ duration: 1500 }")
 					span.sprite-down
 
 
 
 		section#sect2.information
 			.wrapper
-				.logo
-					+svg("logo")
-					span домены
+				a(href="#sect1" v-on:click.prevent="activeSection = 1" v-smooth-scroll="{ duration: 1500 }")
+					.logo
+						+svg("logo")
+						span домены
 				h2 Зарегистрировав у нас домен, вы получите
 
 				.advantage_block
@@ -89,9 +97,10 @@ block content
 
 		section#sect3.why
 			.wrapper
-				.logo
-					+svg("logo")
-					span домены
+				a(href="#sect1" v-on:click.prevent="activeSection = 1" v-smooth-scroll="{ duration: 1500 }")
+					.logo
+						+svg("logo")
+						span домены
 				h2 Почему стоит выбрать «Джино»?
 				span.big_text «Джино» более 18 лет на рынке, имеет 270 000 довольных клиентов, собственную панель управления и многое другое.
 				a.button_create(href="") Создать аккаунт

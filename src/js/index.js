@@ -5,6 +5,17 @@ Vue.use(vueSmoothScroll);
 let app = new Vue({
 	el: '#app',
 	data: {
-		message: "Hello Vue!"
+		activeSection: 1,
+
+		defaultDomen: 'example.ru',
+
+		visible: false
+	},
+
+	methods: {
+		checkDomen(domenName) {
+			this.defaultDomen = this.domenName;
+			this.visible = true
+		}
 	}
 });
