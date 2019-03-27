@@ -1,3 +1,7 @@
-# Документация
+### Верстка промо-страницы
 
-Документация к данной сборке доступна по ссылке [https://github.com/ninelines-team/ninelines-docs](https://github.com/ninelines-team/ninelines-docs).
+Посмотреть в браузере можно по адресу [http://jino.evk-turizm.ru/](http://jino.evk-turizm.ru/)
+
+Макет по адресу [http://jino.evk-turizm.ru/promo.jpg](http://jino.evk-turizm.ru/promo.jpg)
+
+Сверстано с помощью gulp-сборки [https://github.com/ninelines-team/ninelines-docs](https://github.com/ninelines-team/ninelines-docs).
